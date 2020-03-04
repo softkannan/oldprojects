@@ -1,0 +1,24 @@
+﻿<Window x:Class="TileDownLoader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="273" Width="525" ResizeMode="CanMinimize">
+    <Grid>
+        <TextBox Height="27" HorizontalAlignment="Right" Margin="0,9,55,0" Name="txtMapPrjpath" VerticalAlignment="Top" Width="283" />
+        <TextBlock Height="26" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Select the Map Project File:" VerticalAlignment="Top" Width="147" />
+        <Button Content="..." Height="28" HorizontalAlignment="Right" Margin="0,8,12,0" Name="bttnBrowse" VerticalAlignment="Top" Width="37" Click="bttnBrowse_Click" />
+        <TextBlock Height="26" HorizontalAlignment="Left" Margin="85,48,0,0" Name="textBlock2" Text="Save Tiles To:" VerticalAlignment="Top" Width="74" />
+        <TextBox Height="27" HorizontalAlignment="Right" Margin="0,44,55,0" Name="txtOutputFolder" VerticalAlignment="Top" Width="283" />
+        <Button Content="..." Height="28" HorizontalAlignment="Right" Margin="0,42,12,0" Name="bttnBrowseFolder" VerticalAlignment="Top" Width="37" Click="bttnBrowseFolder_Click" />
+        <TextBlock Height="22" HorizontalAlignment="Left" Margin="66,122,0,0" Name="textBlock3" Text="SelectTiles From:" VerticalAlignment="Top" Width="93" />
+        <TextBox Height="27" HorizontalAlignment="Right" Margin="0,117,55,0" Name="txtInputFolder" VerticalAlignment="Top" Width="283" />
+        <Button Content="..." Height="28" HorizontalAlignment="Right" Margin="0,116,12,0" Name="bttnBrowseInputfolder" VerticalAlignment="Top" Width="37" Click="bttnBrowseInputfolder_Click" />
+        <Button Content="Generate KML" Height="26" Margin="0,196,13,0" Name="bttnGenerateKml" VerticalAlignment="Top" HorizontalAlignment="Right" Width="96" Click="bttnGenerateKml_Click" />
+        <Button Content="Download Tiles" Height="26" Margin="0,77,12,0" Name="bttnDownloadTiles" VerticalAlignment="Top" Click="bttnDownloadTiles_Click" HorizontalAlignment="Right" Width="97" />
+        <ProgressBar Height="26" Margin="10,77,219,0" Name="downProgress" VerticalAlignment="Top" SmallChange="1" />
+        <Button Content="Cancel" Height="26" Margin="0,77,116,0" Name="bttnCancel" VerticalAlignment="Top" Click="bttnCancel_Click" HorizontalAlignment="Right" Width="97" />
+        <ProgressBar Height="26" Margin="10,196,0,0" Name="progressKml" SmallChange="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="274" />
+        <Button Content="Cancel" Height="26" HorizontalAlignment="Right" Margin="0,196,116,0" Name="bttnCancelKML" VerticalAlignment="Top" Width="97" Click="bttnCancelKML_Click" />
+        <TextBox Height="27" HorizontalAlignment="Right" Margin="0,150,55,0" Name="txtKMLName" VerticalAlignment="Top" Width="283" />
+        <TextBlock Height="22" HorizontalAlignment="Left" Margin="59,155,0,0" Name="textBlock4" Text="Enter KML Name :" VerticalAlignment="Top" Width="101" />
+    </Grid>
+</Window>

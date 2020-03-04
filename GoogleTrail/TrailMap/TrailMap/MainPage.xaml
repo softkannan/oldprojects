@@ -1,0 +1,151 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:m="clr-namespace:Microsoft.Maps.MapControl;assembly=Microsoft.Maps.MapControl"
+    xmlns:mCore="clr-namespace:Microsoft.Maps.MapControl.Core;assembly=Microsoft.Maps.MapControl"
+    xmlns:local="clr-namespace:TrailMap"
+    xmlns:controls="clr-namespace:TrailMap.Controls"
+    xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="TrailMap.MainPage"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+	<UserControl.Resources>
+		<DataTemplate x:Key="OverlayITemTemplate">
+            <Grid Width="157">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Path=DisplayName}" VerticalAlignment="Top"/>
+                <Slider VerticalAlignment="Top" Maximum="100" Margin="0,0,37,0" Opacity="0.5" Value="{Binding Path=Opaque, Mode=TwoWay}" d:LayoutOverrides="HorizontalAlignment"/>
+                <ComboBox Margin="120,0,0,0" HorizontalAlignment="Left" Width="37" VerticalAlignment="Top" SelectedIndex="{Binding Path=MapType, Mode=TwoWay}">
+                    <ComboBoxItem>N</ComboBoxItem>
+                    <ComboBoxItem>S</ComboBoxItem>
+                    <ComboBoxItem>H</ComboBoxItem>
+                    <ComboBoxItem>T</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </DataTemplate>
+        <Style TargetType="controls:CollapsiblePanel" x:Key="CollapsiblePanelStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="controls:CollapsiblePanel">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Collapse">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ArrowAngleTransform" Storyboard.TargetProperty="Angle" BeginTime="00:00:00">
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0">
+                                                    <SplineDoubleKeyFrame.KeySpline>
+                                                        <KeySpline ControlPoint1="0,1" ControlPoint2="1,1"/>
+                                                    </SplineDoubleKeyFrame.KeySpline>
+                                                </SplineDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Expand">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ArrowAngleTransform" Storyboard.TargetProperty="Angle" BeginTime="00:00:00">
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="90">
+                                                    <SplineDoubleKeyFrame.KeySpline>
+                                                        <KeySpline ControlPoint1="0,1" ControlPoint2="1,1"/>
+                                                    </SplineDoubleKeyFrame.KeySpline>
+                                                </SplineDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+
+
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition x:Name="Collapse2Expand" From="Collapse" To="Expand">
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ArrowAngleTransform" Storyboard.TargetProperty="Angle" BeginTime="00:00:00">
+                                                    <SplineDoubleKeyFrame KeyTime="00:00:01" Value="90">
+                                                        <SplineDoubleKeyFrame.KeySpline>
+                                                            <KeySpline ControlPoint1="0,1" ControlPoint2="1,1"/>
+                                                        </SplineDoubleKeyFrame.KeySpline>
+                                                    </SplineDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                        <VisualTransition x:Name="Expand2Collapse" From="Expand" To="Collapse">
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ArrowAngleTransform" Storyboard.TargetProperty="Angle" BeginTime="00:00:00">
+                                                    <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0">
+                                                        <SplineDoubleKeyFrame.KeySpline>
+                                                            <KeySpline ControlPoint1="0,1" ControlPoint2="1,1"/>
+                                                        </SplineDoubleKeyFrame.KeySpline>
+                                                    </SplineDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                    </VisualStateGroup.Transitions>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid x:Name="ExpandCollapseButton" Height="20" Grid.Row="0">
+                                <Rectangle>
+                                	<Rectangle.Fill>
+                                		<LinearGradientBrush EndPoint="0.995999991893768,0.537999987602234" MappingMode="RelativeToBoundingBox" StartPoint="0.24099999666214,0.559000015258789">
+                                			<GradientStop Color="White"/>
+                                			<GradientStop Color="#FF4395F1" Offset="0.931"/>
+                                		</LinearGradientBrush>
+                                	</Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Cursor="Arrow" HorizontalAlignment="Stretch" Margin="27.75,2.75,-5,1.75" VerticalAlignment="Stretch" FontFamily="Verdana" FontSize="11" FontStyle="Normal" FontWeight="Normal" Foreground="Black" Text="{TemplateBinding Title}" Opacity="1" x:Name="Title"/>
+                                <Path x:Name="Arrow" HorizontalAlignment="Left" Margin="5.85300016403198,2.81200003623962,0,3.29800009727478" VerticalAlignment="Stretch" Width="10.685" Fill="#FF787171" Stretch="Fill" Stroke="#FF000000" StrokeThickness="0" Data="M182.75038,211.50015 L216.5,234.50017 L182.81238,257.87216 z" RenderTransformOrigin="0.5,0.5">
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <RotateTransform x:Name="ArrowAngleTransform" Angle="90"/>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Grid>
+                            <Grid x:Name="ContentContainer" Grid.Row="1">
+                                <Border x:Name="PanelContent" BorderThickness="0">
+                                    <Grid>
+                                        <Rectangle Opacity="0.6" Stroke="Gray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                        <Rectangle Opacity="0.6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Rectangle.RenderTransform>
+                                                <TranslateTransform X="-1" Y="-1" />
+                                            </Rectangle.RenderTransform>
+                                        </Rectangle>
+                                        <ContentPresenter />
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+	
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <m:Map CredentialsProvider="Asi5Hg1oTd-5fXJwDzPdT_pijjALQvUbvLFzWyf-Ee1VBjbrir_IRUnE5cleptP3" LogoVisibility="Collapsed" CopyrightVisibility="Collapsed" NavigationVisibility="Visible" x:Name="map"/>
+        <ComboBox x:Name="comboToolMode" Height="29" Margin="0,0,181,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="118" SelectionChanged="comboToolMode_SelectionChanged">
+            <ComboBoxItem>View</ComboBoxItem>
+            <ComboBoxItem>Custom Map</ComboBoxItem>
+            <ComboBoxItem>Draw Track</ComboBoxItem>
+        </ComboBox>
+        <controls:CollapsiblePanel IsExpanded="True" x:Name="collapseOverlay" Background="Black" Title="Overlays" FontSize="10" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="180" Style="{StaticResource CollapsiblePanelStyle}">
+            <Grid>
+                <Grid x:Name="baseOverlay" Background="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="26" />
+                        <RowDefinition Height="87*" />
+                    </Grid.RowDefinitions>
+                    <ListBox x:Name="listOfOverlays" Grid.Row="1" ItemTemplate="{StaticResource OverlayITemTemplate}"/>
+        
+                    <Button Content="+" Height="23" Margin="123,2,30,0" x:Name="bttnAdd" VerticalAlignment="Top" Click="bttnAdd_Click" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="2,1,0,0" x:Name="comboOverlay" VerticalAlignment="Top" Width="117" />
+                    <Button Content="-" Height="23" Margin="152,2,1,0" x:Name="bttnRemove" VerticalAlignment="Top" Click="bttnRemove_Click" />
+                </Grid>
+            </Grid>
+        </controls:CollapsiblePanel>
+        <controls:Custommap x:Name="customMapArea" HorizontalAlignment="Right" Width="151" Height="250" VerticalAlignment="Bottom" Visibility="Collapsed"/>
+        
+    </Grid>
+</UserControl>

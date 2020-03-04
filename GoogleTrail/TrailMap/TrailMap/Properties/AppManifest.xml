@@ -1,0 +1,18 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  EntryPointAssembly="BingTrekMap"
+  EntryPointType="BingTrekMap.App">
+  <Deployment.Parts>
+  </Deployment.Parts>
+  <Deployment.OutOfBrowserSettings>
+    <OutOfBrowserSettings
+      ShortName="Bing Trek Map">
+      <OutOfBrowserSettings.WindowSettings>
+        <WindowSettings Title="Offline Task List" />
+      </OutOfBrowserSettings.WindowSettings>
+      <OutOfBrowserSettings.Blurb>
+        Allows saving your tasks offline
+      </OutOfBrowserSettings.Blurb>
+    </OutOfBrowserSettings>
+  </Deployment.OutOfBrowserSettings>
+</Deployment>

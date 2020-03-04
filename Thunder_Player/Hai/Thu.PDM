@@ -1,0 +1,133 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=d:\Developer\Pro\Hai\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+D:\Developer\Ocx\JScrollH.ocx=
+C:\WINDOWS\SYSTEM\MSDXM.OCX=
+D:\Developer\Pro\Hai\P1.ocx=
+D:\Developer\Pro\Hai\libbtn.ocx=
+D:\Developer\Pro\Hai\JScrollH.ocx=
+C:\WINDOWS\SYSTEM\NewVolctr.ocx=
+D:\Developer\Vctr\Vctr.ocx=
+C:\WINDOWS\SYSTEM\P1.ocx=
+C:\WINDOWS\SYSTEM\libbtn.ocx=
+C:\WINDOWS\SYSTEM\Vctr.ocx=
+G:\Developer\Pro\Hai\libbtn.ocx=
+D:\MediaPlay\Video\Thunder Player V1.00\Vctr.ocx=
+D:\MediaPlay\Video\Thunder Player V1.00\libbtn.ocx=
+D:\MediaPlay\Video\Thunder Player V1.00\P1.ocx=
+D:\MediaPlay\Video\Thu\SliderThu.ocx=
+D:\MediaPlay\Video\Thu\libbtn.ocx=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=
+C:\WINDOWS\SYSTEM\MCI32.OCX=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\WINDOWS\SYSTEM\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\SYSTEM\MCI32.OCX=Yes
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM\MSDXM.OCX=Yes
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\MediaPlay\Video\Thu\Thu.exe=Yes
+D:\MediaPlay\Video\Thu\libbtn.ocx=Yes
+D:\MediaPlay\Video\Thu\SliderThu.ocx=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\Developer\Pro\Hai\Thu.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\Developer\Pro\Hai\libbtn.ocx=$(WinSysPath)
+D:\Developer\Pro\Hai\P1.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MCI32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSDXM.OCX=$(WinSysPath)
+D:\Developer\Ocx\JScrollH.ocx=$(WinSysPath)
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+F:\Developer\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\Developer\Pro\Hai\JScrollH.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\NewVolctr.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\libbtn.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\P1.ocx=$(WinSysPath)
+D:\Developer\Vctr\Vctr.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\Vctr.ocx=$(WinSysPath)
+G:\Developer\Pro\Hai\Thu.exe=$(AppPath)
+G:\Developer\Pro\Hai\libbtn.ocx=$(WinSysPath)
+D:\MediaPlay\Video\Thunder Player V1.00\P1.ocx=$(WinSysPath)
+D:\MediaPlay\Video\Thunder Player V1.00\libbtn.ocx=$(WinSysPath)
+D:\MediaPlay\Video\Thunder Player V1.00\Vctr.ocx=$(WinSysPath)
+D:\MediaPlay\Video\Thu\Thu.exe=$(AppPath)
+D:\MediaPlay\Video\Thu\libbtn.ocx=$(WinSysPath)
+D:\MediaPlay\Video\Thu\SliderThu.ocx=$(WinSysPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\Developer\Pro\Hai\Thu.exe=No
+G:\Developer\Pro\Hai\Thu.exe=No
+D:\MediaPlay\Video\Thu\Thu.exe=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Thu
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=d:\Developer\Pro\Hai\Package
+ProjectFolder=D:\Developer\Pro\Hai
+ServerSideCab=
+File1=d:\Developer\Pro\Hai\Package\setup.exe
+File2=d:\Developer\Pro\Hai\Package\Setup.Lst
+File3=d:\Developer\Pro\Hai\Package\Thu.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Thu
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Thu]
+Icon1=Thu.exe
+Title1=Thu
+StartIn1=$(AppPath)
+Key1=Icon1

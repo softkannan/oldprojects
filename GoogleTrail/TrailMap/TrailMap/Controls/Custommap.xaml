@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="TrailMap.Controls.Custommap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="160">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Button Content="Select Highlighted Area" Height="27" Name="bttnSelectArea" VerticalAlignment="Top" Margin="8,39,8,0" Click="bttnSelectArea_Click" />
+        <Button Content="Select Current Zoom" Height="27" Margin="8,72,8,0" Name="bttnSelectZoomLevel" VerticalAlignment="Top" Click="bttnSelectZoomLevel_Click" />
+        <Button Content="Save Map" Height="27" Margin="8,105,8,0" Name="bttnSaveProjectFile" VerticalAlignment="Top" Click="bttnSaveProjectFile_Click" />
+        <Button x:Name="bttnDrawArea" Content="Draw Area" Margin="8,8,8,0" Height="27" VerticalAlignment="Top" Click="bttnDrawArea_Click"/>
+    </Grid>
+</UserControl>
