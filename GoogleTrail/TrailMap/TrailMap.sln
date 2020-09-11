@@ -1,17 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrailMap", "TrailMap\TrailMap.csproj", "{005F155D-A8C5-47E7-9917-283628833863}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileDownLoader", "TileDownLoader\TileDownLoader.csproj", "{C6C539E8-3A07-4C3F-8943-D3F1DE99A72D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrailMapLauncher", "TrailMapLauncher\TrailMapLauncher.csproj", "{4FEA4BB3-D294-480E-82B8-58808B55D36B}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TrailMapInstallation", "TrailMapInstallation\TrailMapInstallation.vdproj", "{F1CAAAB5-F235-4305-A81B-CB43157AED76}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapNavigator", "MapNavigator\MapNavigator.csproj", "{18C1258D-9E64-431D-8CEA-D1E6D643FE8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrailMapDesktop", "TrailMapDesktop\TrailMapDesktop.csproj", "{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,16 +21,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{005F155D-A8C5-47E7-9917-283628833863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Release|Any CPU.Build.0 = Release|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{005F155D-A8C5-47E7-9917-283628833863}.Release|x86.ActiveCfg = Release|Any CPU
 		{C6C539E8-3A07-4C3F-8943-D3F1DE99A72D}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{C6C539E8-3A07-4C3F-8943-D3F1DE99A72D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{C6C539E8-3A07-4C3F-8943-D3F1DE99A72D}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -53,12 +41,6 @@ Global
 		{4FEA4BB3-D294-480E-82B8-58808B55D36B}.Release|Mixed Platforms.Build.0 = Release|x86
 		{4FEA4BB3-D294-480E-82B8-58808B55D36B}.Release|x86.ActiveCfg = Release|x86
 		{4FEA4BB3-D294-480E-82B8-58808B55D36B}.Release|x86.Build.0 = Release|x86
-		{F1CAAAB5-F235-4305-A81B-CB43157AED76}.Debug|Any CPU.ActiveCfg = Debug
-		{F1CAAAB5-F235-4305-A81B-CB43157AED76}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{F1CAAAB5-F235-4305-A81B-CB43157AED76}.Debug|x86.ActiveCfg = Debug
-		{F1CAAAB5-F235-4305-A81B-CB43157AED76}.Release|Any CPU.ActiveCfg = Release
-		{F1CAAAB5-F235-4305-A81B-CB43157AED76}.Release|Mixed Platforms.ActiveCfg = Release
-		{F1CAAAB5-F235-4305-A81B-CB43157AED76}.Release|x86.ActiveCfg = Release
 		{18C1258D-9E64-431D-8CEA-D1E6D643FE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18C1258D-9E64-431D-8CEA-D1E6D643FE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18C1258D-9E64-431D-8CEA-D1E6D643FE8F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -71,6 +53,18 @@ Global
 		{18C1258D-9E64-431D-8CEA-D1E6D643FE8F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{18C1258D-9E64-431D-8CEA-D1E6D643FE8F}.Release|x86.ActiveCfg = Release|Any CPU
 		{18C1258D-9E64-431D-8CEA-D1E6D643FE8F}.Release|x86.Build.0 = Release|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Debug|x86.Build.0 = Debug|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7382D70-E2A7-4FA2-A308-EDCC1D79E669}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <AssemblyTitle>Demo.WindowsPresentation</AssemblyTitle>
+    <Description>Demo for GMap.NET.WindowsPresentation</Description>
+    <Product>Demo.WindowsPresentation</Product>
+    <TargetFrameworks>net40;netcoreapp3.0</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <OutputType>WinExe</OutputType>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>../../sn.snk</AssemblyOriginatorKeyFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>..\..\Build\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\Build\Release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Demo.WindowsForms\Source\DemoStuff.cs">
+      <Link>Source\DemoStuff.cs</Link>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\GMap.NET\GMap.NET.Core\GMap.NET.Core.csproj" />
+    <ProjectReference Include="..\..\GMap.NET\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="CustomMarkers\bigMarkerGreen.png" />
+    <Resource Include="Resources\zoom+.png" />
+    <Resource Include="Resources\zoom-.png" />
+    <Resource Include="CustomMarkers\red-dot.png" />
+  </ItemGroup>
+
+</Project>
